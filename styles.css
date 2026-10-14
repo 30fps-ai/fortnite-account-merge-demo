@@ -1,0 +1,42 @@
+:root{--bg:#0b1020;--bg2:#141a2e;--pn:#1b2340;--bd:#2c3760;--tx:#e9edff;--mu:#a9b3d6;--bl:#3d8bff;--pu:#8b5cf6;--am:#ffb020;--gr:#2fd48a;--rd:#ff5d73}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(circle at 20% -10%,#1e2a5a,var(--bg) 55%);color:var(--tx);font:16px/1.5 system-ui,Segoe UI,Roboto,sans-serif;min-height:100vh}
+header{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding:.8rem 1rem;background:var(--bg2);border-bottom:1px solid var(--bd)}
+header h1{font-size:1.05rem;margin:0;background:linear-gradient(90deg,var(--bl),var(--pu));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hr{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
+#disc{background:#3a2a05;color:#ffe3a3;border-bottom:2px solid var(--am);padding:.5rem 1rem;font-size:.85rem;font-weight:600}
+nav{display:flex;gap:.4rem;overflow-x:auto;padding:.6rem 1rem;background:var(--bg2)}
+nav button{white-space:nowrap}
+main{max-width:1100px;margin:0 auto;padding:1rem;outline:0;animation:in .3s ease}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+h2{margin:.2rem 0 .6rem}h3{margin:.2rem 0 .5rem}
+.btn{background:var(--pn);color:var(--tx);border:1px solid var(--bd);border-radius:10px;padding:.5rem .9rem;font:inherit;cursor:pointer;transition:.15s}
+.btn:hover:not(:disabled){border-color:var(--bl);transform:translateY(-1px)}
+.btn.on{background:var(--bl);border-color:var(--bl);color:#04122e;font-weight:700}
+.btn.pri{background:linear-gradient(90deg,var(--bl),var(--pu));border:0;font-weight:700;color:#fff}
+.btn.dg{border-color:var(--rd);color:#ffc2cb}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+:focus-visible{outline:3px solid var(--am);outline-offset:2px}
+.card{background:var(--pn);border:1px solid var(--bd);border-radius:16px;padding:1rem;margin-bottom:1rem}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.hero{background:linear-gradient(135deg,#1c2b6b,#3b1d7a);border-radius:18px;padding:1.5rem;margin-bottom:1rem}
+.row{display:flex;gap:.5rem;flex-wrap:wrap;margin:.6rem 0}
+.bd{display:inline-block;border-radius:999px;padding:.1rem .65rem;font-size:.8rem;font-weight:700;border:1px solid}
+.bd.g{color:var(--gr);border-color:var(--gr)}.bd.a{color:var(--am);border-color:var(--am)}.bd.r{color:var(--rd);border-color:var(--rd)}.bd.b{color:#8fbaff;border-color:var(--bl)}
+.stages{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.6rem}
+.stg{background:var(--bg2);border:1px solid var(--bd);border-radius:12px;padding:.7rem}
+.stg b{display:inline-grid;place-items:center;width:1.8rem;height:1.8rem;border-radius:50%;background:var(--pu);margin-right:.4rem}
+.stg p{color:var(--mu);font-size:.85rem;margin:.3rem 0 0}
+ul.l{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
+.it{display:flex;gap:.6rem;align-items:center;background:var(--bg2);border-radius:10px;padding:.4rem .6rem}
+.it small{display:block;color:var(--mu)}
+.ic{width:2.2rem;height:2.2rem;border-radius:9px;display:grid;place-items:center;font-style:normal;font-weight:800;background:linear-gradient(135deg,hsl(var(--h) 80% 55%),hsl(calc(var(--h) + 60) 70% 35%))}
+.al{border-left:5px solid var(--am);background:#2d2308;padding:.7rem 1rem;border-radius:8px;margin:.6rem 0}
+.al.g{border-color:var(--gr);background:#0c2b20}.al.r{border-color:var(--rd);background:#34121a}
+.bar{height:12px;background:var(--bg2);border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--bl),var(--pu));transition:width .4s}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:.4rem;border-bottom:1px solid var(--bd);vertical-align:top}
+.mu{color:var(--mu)}textarea{width:100%;min-height:80px;background:var(--bg2);color:var(--tx);border:1px solid var(--bd);border-radius:10px;padding:.6rem;font:inherit}
+details{background:var(--bg2);border:1px solid var(--bd);border-radius:12px;padding:.6rem 1rem;margin-bottom:.6rem}summary{cursor:pointer;font-weight:700}
+.mail{border:1px dashed var(--bl);border-radius:10px;padding:.6rem;background:var(--bg2);font-size:.9rem}
+@media(max-width:600px){main{padding:.6rem}.hero{padding:1rem}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
